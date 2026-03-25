@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
-import { Product } from './product.interface';
-import product from '../../data/products.json';
+import { Purchase } from './purchase.interface';
+import purchase from '../../data/purchases.json';
 import { ApiResponse } from '../interfaces/response.interface';
 
 @Injectable()
-export class ProductService {
-  findAll(): ApiResponse<Product[]> {
+export class PurchaseService {
+  findAll(): ApiResponse<Purchase[]> {
     return {
       success: true,
-      data: product,
+      data: purchase,
       message: 'Fetched products successfully',
     };
   }
